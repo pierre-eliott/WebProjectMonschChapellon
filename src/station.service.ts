@@ -19,6 +19,16 @@ export class StationService implements OnModuleInit {
     return this.stations;
   }
 
+  addRemoveFavorite(id: number): Station[] {
+
+    //console.log("TEST : " + id);
+   
+    this.stations[id].isFavorite = !this.stations[id].isFavorite;
+    return this.stations;
+    
+  }
+
+
   onModuleInit() {
     Promise.all([this.loadStationsFromServer()]);
   }
@@ -29,9 +39,12 @@ export class StationService implements OnModuleInit {
 
     data.pipe(
       map((response) => {
+
+          let i: number = 0;
           response.data.results.forEach((element) => {
           const station = new Station();
-
+          
+          station.id = i;
           station.n_amenageur = element.n_amenageur;
           station.n_operateur = element.n_operateur;
           station.id_station = element.id_station;
@@ -50,8 +63,11 @@ export class StationService implements OnModuleInit {
           station.date_maj = element.date_maj;
           station.region = element.region;
           station.departement = element.departement;
+          station.isFavorite = false;
 
           this.create(station);
+
+          i++;
         });
       })
     )

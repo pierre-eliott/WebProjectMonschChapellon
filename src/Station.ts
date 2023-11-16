@@ -2,6 +2,8 @@
 import {IsDateString, IsNotEmpty, IsString} from 'class-validator';
 
 export class Station {
+    @IsNotEmpty()
+    id: number;
     @IsString()
     n_amenageur: string;
     @IsString()
@@ -38,6 +40,7 @@ export class Station {
     region: string;
     @IsString()
     departement: string;
+    isFavorite: boolean;
 }
 
 export interface StationAPI {

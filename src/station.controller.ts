@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
 import { StationService } from './station.service';
 import { Station } from './Station';
+import { Console } from 'console';
 
 @Controller('/stations')
 export class StationController {
@@ -14,5 +15,10 @@ export class StationController {
   @Get()
   findAll() {
     return this.stationService.findAll();
+  }
+
+  @Post('/fav')
+  addRemoveFavorite(@Body('id') id: number): Station[] {
+    return this.stationService.addRemoveFavorite(id);
   }
 }
