@@ -20,8 +20,6 @@ export class StationService implements OnModuleInit {
   }
 
   addRemoveFavorite(id: number): Station[] {
-
-    //console.log("TEST : " + id);
    
     this.stations[id].isFavorite = !this.stations[id].isFavorite;
     return this.stations;
