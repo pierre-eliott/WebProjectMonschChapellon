@@ -17,6 +17,8 @@ export class StationController {
     return this.stationService.findAll();
   }
 
+  // Add Endpoint
+
   @Post('/search')
   @HttpCode(200)
   searchStation(@Body() body: { name: string }) {
