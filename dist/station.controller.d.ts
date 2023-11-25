@@ -5,5 +5,8 @@ export declare class StationController {
     constructor(stationService: StationService);
     create(station: Station): Station;
     findAll(): Station[];
+    searchStation(body: {
+        name: string;
+    }): Station[];
     addRemoveFavorite(id: number): Station[];
 }

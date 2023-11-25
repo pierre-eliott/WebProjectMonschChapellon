@@ -28,6 +28,11 @@ export class StationService implements OnModuleInit {
     
   }
 
+  searchStation(name: string)
+  {
+    return this.stations.filter((station)=>station.n_station.includes(name));
+  }
+
 
   onModuleInit() {
     Promise.all([this.loadStationsFromServer()]);

@@ -1,7 +1,6 @@
 import { Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
 import { StationService } from './station.service';
 import { Station } from './Station';
-import { Console } from 'console';
 
 @Controller('/stations')
 export class StationController {
@@ -15,6 +14,12 @@ export class StationController {
   @Get()
   findAll() {
     return this.stationService.findAll();
+  }
+
+  @Post('/search')
+  @HttpCode(200)
+  searchStation(@Body() body: { name: string }) {
+    return this.stationService.searchStation(body.name);
   }
 
   @Post('/fav')

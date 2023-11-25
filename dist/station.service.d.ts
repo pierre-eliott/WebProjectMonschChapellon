@@ -8,6 +8,7 @@ export declare class StationService implements OnModuleInit {
     create(station: Station): Station;
     findAll(): Station[];
     addRemoveFavorite(id: number): Station[];
+    searchStation(name: string): Station[];
     onModuleInit(): void;
     loadStationsFromServer(): Promise<void>;
 }

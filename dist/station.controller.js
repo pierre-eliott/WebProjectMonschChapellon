@@ -26,6 +26,9 @@ let StationController = class StationController {
     findAll() {
         return this.stationService.findAll();
     }
+    searchStation(body) {
+        return this.stationService.searchStation(body.name);
+    }
     addRemoveFavorite(id) {
         return this.stationService.addRemoveFavorite(id);
     }
@@ -44,6 +47,14 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], StationController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Post)('/search'),
+    (0, common_1.HttpCode)(200),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], StationController.prototype, "searchStation", null);
 __decorate([
     (0, common_1.Post)('/fav'),
     __param(0, (0, common_1.Body)('id')),

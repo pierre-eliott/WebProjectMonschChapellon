@@ -27,9 +27,11 @@ let StationService = class StationService {
         return this.stations;
     }
     addRemoveFavorite(id) {
-        console.log("TEST : " + id);
         this.stations[id].isFavorite = !this.stations[id].isFavorite;
         return this.stations;
+    }
+    searchStation(name) {
+        return this.stations.filter((station) => station.n_station.includes(name));
     }
     onModuleInit() {
         Promise.all([this.loadStationsFromServer()]);
