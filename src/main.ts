@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { NestFactory } from '@nestjs/core';
 import { StationModule } from './station.module';
 
