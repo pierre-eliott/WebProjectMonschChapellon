@@ -44,7 +44,7 @@ Exemple de corps de requête :
   "isFavorite": false
 }
 
-'GET /stations'
+### 'GET /stations'
 Récupère toutes les stations.
 
 POST /stations/search
@@ -56,7 +56,7 @@ Exemple de corps de requête :
   "name": "Nom de la station"
 }
 
-'POST /stations/fav'
+### 'POST /stations/fav'
 Ajoute ou supprime une station des favoris.
 
 Exemple de corps de requête :
