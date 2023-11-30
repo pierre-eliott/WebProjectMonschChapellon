@@ -58,7 +58,7 @@ Exemple de corps de requête :
 }
 ```
 
-### 'POST /stations/fav'
+'POST /stations/fav'
 Ajoute ou supprime une station des favoris.
 
 Exemple de corps de requête :
