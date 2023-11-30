@@ -42,7 +42,8 @@ Exemple de corps de requête :
   "region": "Région",
   "departement": "Département",
   "isFavorite": false
-}```
+}
+```
 
 'GET /stations'
 Récupère toutes les stations.
@@ -54,7 +55,8 @@ Exemple de corps de requête :
 ```JSON
 {
   "name": "Nom de la station"
-}```
+}
+```
 
 ### 'POST /stations/fav'
 Ajoute ou supprime une station des favoris.
@@ -63,7 +65,8 @@ Exemple de corps de requête :
 ```JSON
 {
   "id": 1
-}```
+}
+```
 
 Modèles
 Modèle de Station
