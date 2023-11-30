@@ -49,7 +49,8 @@ Exemple de corps de requête :
 
 Récupère toutes les stations.
 
-POST /stations/search
+`POST /stations/search`
+
 Recherche des stations par nom.
 
 Exemple de corps de requête :
