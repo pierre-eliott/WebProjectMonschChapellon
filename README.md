@@ -45,7 +45,7 @@ Exemple de corps de requête :
 }
 ```
 
-'GET /stations'
+`GET /stations`
 
 Récupère toutes les stations.
 
@@ -59,7 +59,7 @@ Exemple de corps de requête :
 }
 ```
 
-'POST /stations/fav'
+`POST /stations/fav`
 
 Ajoute ou supprime une station des favoris.
 
@@ -76,26 +76,26 @@ Représente la structure d'une station.
 
 Champs :
 
-'id' (number)
-'n_amenageur' (string)
-'n_operateur' (string)
-'id_station' (string)
-'n_station' (string)
-'ad_station' (string)
-'code_insee' (number)
-'xlongitude' (number)
-'ylatitude' (number)
-'nbre_pdc' (number)
-'id_pdc' (string)
-'puiss_max' (number)
-'type_prise' (string)
-'acces_recharge' (string)
-'accessibilite' (string)
-'observations' (string)
-'date_maj' (string - Format Date)
-'region' (string)
-'departement' (string)
-'isFavorite' (boolean)
+Markup : *'id' (number)
+Markup : *'n_amenageur' (string)
+Markup : *'n_operateur' (string)
+Markup : *'id_station' (string)
+Markup : *'n_station' (string)
+Markup : *'ad_station' (string)
+Markup : *'code_insee' (number)
+Markup : *'xlongitude' (number)
+Markup : *'ylatitude' (number)
+Markup : *'nbre_pdc' (number)
+Markup : *'id_pdc' (string)
+Markup : *'puiss_max' (number)
+Markup : *'type_prise' (string)
+Markup : *'acces_recharge' (string)
+Markup : *'accessibilite' (string)
+Markup : *'observations' (string)
+Markup : *'date_maj' (string - Format Date)
+Markup : *'region' (string)
+Markup : *'departement' (string)
+Markup : *'isFavorite' (boolean)
 
 ## Interface Station API
 
