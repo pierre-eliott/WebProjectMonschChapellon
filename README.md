@@ -1,73 +1,97 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# API de Stations de Recharge
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Cette API sert de système de gestion des stations de recharge en offrant des fonctionnalités pour manipuler et récupérer les données des stations.
 
 ## Installation
 
-```bash
-$ npm install
-```
+Pour utiliser cette API, suivez ces étapes :
 
-## Running the app
+1. Clonez le dépôt.
+2. Installez les dépendances avec `npm install`.
+3. Configurez les variables d'environnement, y compris `PORT`.
 
-```bash
-# development
-$ npm run start
+## Lancement de l'Application
 
-# watch mode
-$ npm run start:dev
+Pour démarrer l'application, exécutez `npm start`.
 
-# production mode
-$ npm run start:prod
-```
+## Endpoints 
 
-## Test
+### `POST /stations`
 
-```bash
-# unit tests
-$ npm run test
+Crée une nouvelle station.
 
-# e2e tests
-$ npm run test:e2e
+Exemple de corps de requête :
+```json
+{
+  "n_amenageur": "Nom de l'aménageur",
+  "n_operateur": "Nom de l'opérateur",
+  "id_station": "ID de la station",
+  "n_station": "Nom de la station",
+  "ad_station": "Adresse de la station",
+  "code_insee": 12345,
+  "xlongitude": 12.345,
+  "ylatitude": 67.89,
+  "nbre_pdc": 3,
+  "id_pdc": "ID du PDC",
+  "puiss_max": 50,
+  "type_prise": "Type de prise",
+  "acces_recharge": "Accès",
+  "accessibilite": "Accessibilité",
+  "observations": "Observations",
+  "date_maj": "2023-11-30",
+  "region": "Région",
+  "departement": "Département",
+  "isFavorite": false
+}
 
-# test coverage
-$ npm run test:cov
-```
+'GET /stations'
+Récupère toutes les stations.
 
-## Support
+POST /stations/search
+Recherche des stations par nom.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Exemple de corps de requête :
 
-## Stay in touch
+{
+  "name": "Nom de la station"
+}
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+'POST /stations/fav'
+Ajoute ou supprime une station des favoris.
 
-## License
+Exemple de corps de requête :
 
-Nest is [MIT licensed](LICENSE).
+{
+  "id": 1
+}
+
+Modèles
+Modèle de Station
+Représente la structure d'une station.
+
+Champs :
+
+id (number)
+n_amenageur (string)
+n_operateur (string)
+id_station (string)
+n_station (string)
+ad_station (string)
+code_insee (number)
+xlongitude (number)
+ylatitude (number)
+nbre_pdc (number)
+id_pdc (string)
+puiss_max (number)
+type_prise (string)
+acces_recharge (string)
+accessibilite (string)
+observations (string)
+date_maj (string - Format Date)
+region (string)
+departement (string)
+isFavorite (boolean)
+Interface Station API
+Définit la structure des données de la station récupérées depuis l'API.
+
+Référez-vous au code pour la structure complète des interfaces Station et StationAPI.
