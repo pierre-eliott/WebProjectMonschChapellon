@@ -46,6 +46,7 @@ Exemple de corps de requête :
 ```
 
 'GET /stations'
+
 Récupère toutes les stations.
 
 POST /stations/search
@@ -59,6 +60,7 @@ Exemple de corps de requête :
 ```
 
 'POST /stations/fav'
+
 Ajoute ou supprime une station des favoris.
 
 Exemple de corps de requête :
@@ -68,7 +70,7 @@ Exemple de corps de requête :
 }
 ```
 
-Modèles
+## Modèles
 Modèle de Station
 Représente la structure d'une station.
 
