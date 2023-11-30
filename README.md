@@ -71,27 +71,29 @@ Représente la structure d'une station.
 
 Champs :
 
-id (number)
-n_amenageur (string)
-n_operateur (string)
-id_station (string)
-n_station (string)
-ad_station (string)
-code_insee (number)
-xlongitude (number)
-ylatitude (number)
-nbre_pdc (number)
-id_pdc (string)
-puiss_max (number)
-type_prise (string)
-acces_recharge (string)
-accessibilite (string)
-observations (string)
-date_maj (string - Format Date)
-region (string)
-departement (string)
-isFavorite (boolean)
-Interface Station API
+'id' (number)
+'n_amenageur' (string)
+'n_operateur' (string)
+'id_station' (string)
+'n_station' (string)
+'ad_station' (string)
+'code_insee' (number)
+'xlongitude' (number)
+'ylatitude' (number)
+'nbre_pdc' (number)
+'id_pdc' (string)
+'puiss_max' (number)
+'type_prise' (string)
+'acces_recharge' (string)
+'accessibilite' (string)
+'observations' (string)
+'date_maj' (string - Format Date)
+'region' (string)
+'departement' (string)
+'isFavorite' (boolean)
+
+## Interface Station API
+
 Définit la structure des données de la station récupérées depuis l'API.
 
 Référez-vous au code pour la structure complète des interfaces Station et StationAPI.
