@@ -16,7 +16,7 @@ Pour démarrer l'application, exécutez `npm start`.
 
 ## Endpoints 
 
-### `POST /stations`
+`POST /stations`
 
 Crée une nouvelle station.
 
