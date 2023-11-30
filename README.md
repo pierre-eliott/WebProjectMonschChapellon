@@ -20,16 +20,8 @@ Pour démarrer l'application, exécutez `npm start`.
 
 Crée une nouvelle station.
 
-```JSON
-{
- "name": "Martin",
- "bornOn": "1957-01-05",
- "bornIn": "http://www.scotland.org#"
-}
-```
-
 Exemple de corps de requête :
-```json
+```JSON
 {
   "n_amenageur": "Nom de l'aménageur",
   "n_operateur": "Nom de l'opérateur",
@@ -59,7 +51,7 @@ POST /stations/search
 Recherche des stations par nom.
 
 Exemple de corps de requête :
-```json
+```JSON
 {
   "name": "Nom de la station"
 }```
@@ -68,7 +60,7 @@ Exemple de corps de requête :
 Ajoute ou supprime une station des favoris.
 
 Exemple de corps de requête :
-```json
+```JSON
 {
   "id": 1
 }```
