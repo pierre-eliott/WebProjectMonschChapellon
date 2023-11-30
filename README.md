@@ -20,6 +20,14 @@ Pour démarrer l'application, exécutez `npm start`.
 
 Crée une nouvelle station.
 
+```JSON
+{
+ "name": "Martin",
+ "bornOn": "1957-01-05",
+ "bornIn": "http://www.scotland.org#"
+}
+```
+
 Exemple de corps de requête :
 ```json
 {
