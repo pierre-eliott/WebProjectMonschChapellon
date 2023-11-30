@@ -21,7 +21,7 @@ Pour démarrer l'application, exécutez `npm start`.
 Crée une nouvelle station.
 
 Exemple de corps de requête :
-
+'''json
 {
   "n_amenageur": "Nom de l'aménageur",
   "n_operateur": "Nom de l'opérateur",
