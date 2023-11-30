@@ -44,7 +44,7 @@ Exemple de corps de requête :
   "isFavorite": false
 }
 
-### 'GET /stations'
+'GET /stations'
 Récupère toutes les stations.
 
 POST /stations/search
