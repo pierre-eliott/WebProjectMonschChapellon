@@ -72,8 +72,7 @@ Exemple de corps de requête :
 ```
 
 ## Modèles
-Modèle de Station
-Représente la structure d'une station.
+Station représente la structure d'une station.
 
 Champs :
 
