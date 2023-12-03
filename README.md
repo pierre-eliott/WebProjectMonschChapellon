@@ -1,5 +1,7 @@
 # API de Stations de Recharge
 
+*10/12/2023, Pierre-Eliott Monsch - Léa Chapellon*
+
 Cette API sert de système de gestion des stations de recharge en offrant des fonctionnalités pour manipuler et récupérer les données des stations.
 
 ## Installation
